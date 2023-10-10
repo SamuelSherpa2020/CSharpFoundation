@@ -1,10 +1,13 @@
-﻿namespace CSharpFoundation
+﻿using CSharpFoundation.PracticeProblems;
+
+namespace CSharpFoundation
 {
     public class Program
     {
-        static void Main(string[] args)
+       public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            //CheckNum.CheckOddOrEven(2);
+            CheckNum.AskEvenOrOdd();
         }
     }
 }
