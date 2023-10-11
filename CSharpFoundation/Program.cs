@@ -7,7 +7,8 @@ namespace CSharpFoundation
        public static void Main(string[] args)
         {
             //CheckNum.CheckOddOrEven(2);
-            CheckNum.AskEvenOrOdd();
+            //CheckNum.AskEvenOrOdd();
+            CheckNum.AskGrade();
         }
     }
 }

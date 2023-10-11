@@ -30,15 +30,57 @@ namespace CSharpFoundation.PracticeProblems
         {
             //string? firstInput = Console.ReadLine()?.ToString()??"0";
             //int userInput = Convert.ToInt32(firstInput);
+
             Console.Write("Enter a number to check odd or even:");
             int? firstInput = Convert.ToInt32(Console.ReadLine());
-            int userInput = firstInput != null?Convert.ToInt32(firstInput) : 0;
-            if(userInput %2 == 0)
+            int userInput = firstInput != null ? Convert.ToInt32(firstInput) : 0;
+
+            if (userInput % 2 == 0)
             {
                 Console.WriteLine("The number is even.");
             }
             else { Console.WriteLine("The number is odd."); }
         }
         #endregion
+
+        #region Ask and Print Grade
+        public static void AskGrade()
+        {
+            Console.Write("Enter a percentage to display student's grade:");
+            int? percentage = Convert.ToInt32(Console.ReadLine()?.ToString() ?? "0");
+            switch (percentage / 10)
+            {
+                case 10:
+                    Console.WriteLine("The grade of a student is \"A+\".");
+                    break;
+                case 9:
+                    Console.WriteLine("The grade of a student is A+");
+                    break;
+                case 8:
+                    Console.WriteLine("The grade of a student is 'A'.");
+                    break;
+                case 7:
+                    Console.WriteLine("The grade of a student is B+");
+                    break;
+                case 6:
+                    Console.WriteLine("The grade of a student is B");
+                    break;
+                case 5:
+                    Console.WriteLine("The grade of a student is C+");
+                    break;
+                case 4:
+                    Console.WriteLine("The grade of a student is C+");
+                    break;
+                case 3:
+                    Console.WriteLine("The grade of a student is D");
+                    break;
+
+                default:
+                    Console.WriteLine("You are failed.");
+                    break;
+            }
+        }
+        #endregion
+
     }
 }
