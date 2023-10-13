@@ -47,7 +47,9 @@ namespace CSharpFoundation.PracticeProblems
         public static void AskGrade()
         {
             Console.Write("Enter a percentage to display student's grade:");
-            int? percentage = Convert.ToInt32(Console.ReadLine()?.ToString() ?? "0");
+            string? inputValue = Console.ReadLine();
+            int? percentage = string.IsNullOrEmpty(inputValue)?0:Convert.ToInt32(inputValue);
+            //int? percentage = Convert.ToInt32(Console.ReadLine()?.ToString() ?? "0");
             switch (percentage / 10)
             {
                 case 10:
