@@ -10,6 +10,7 @@ namespace CSharpFoundation
         {
             do
             {
+                Console.WriteLine("You can enter only english numbers like 1,2,3.. :-");
                 Console.Write("Which program do you want to run, enter a number like:\n" +
                     "1. Check Odd or Even\n" +
                     "2. Ask Odd or Even\n" +
