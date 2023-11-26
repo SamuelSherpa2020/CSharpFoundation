@@ -5,8 +5,6 @@ namespace CSharpFoundation
 {
     public class Program
     {
-        static bool cont = true;
-        static bool endProgram = false;
         public static void Main(string[] args)
         {
             string? inputValue;
@@ -18,7 +16,9 @@ namespace CSharpFoundation
                 Console.Write("Which program do you want to run, enter a number like:\n" +
                     "1. Check Odd or Even\n" +
                     "2. Ask Odd or Even\n" +
-                    "3. Print Grade\n"
+                    "3. Print Grade\n"+
+                    "4. Check NullToInt\n"+
+                    "5. Check NullToString\n"
                     );
                 inputValue = Console.ReadLine()?.ToString() ?? "Null";
 
@@ -73,6 +73,16 @@ namespace CSharpFoundation
                     CheckNum.AskGrade();
                     Console.WriteLine("X-----------------X");
 
+                }
+                else if(value ==4)
+                {
+                    LearnAboutNull.NullToInt();
+                    Console.WriteLine("X----------------X");
+                }
+                else if (value == 5)
+                {
+                    LearnAboutNull.NullToString();
+                    Console.WriteLine("X----------------X");
                 }
                 else
                 {
