@@ -12,8 +12,7 @@ namespace CSharpFoundation
             do
             {
                 Console.WriteLine("X-----------------X");
-                Console.WriteLine("You can enter only english numbers like 1,2,3.. :-");
-                Console.Write("Which program do you want to run, enter a number like:\n" +
+                Console.Write("Which program do you want to run, only number like:1,2,3.. is allowed:-\n" +
                     "1. Check Odd or Even\n" +
                     "2. Ask Odd or Even\n" +
                     "3. Print Grade\n"+
@@ -60,7 +59,7 @@ namespace CSharpFoundation
                 {
                     CheckNum.CheckOddOrEven(2);
                     Console.WriteLine("X-----------------X");
-
+                    
                 }
                 else if (value == 2)
                 {
