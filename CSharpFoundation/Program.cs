@@ -17,7 +17,8 @@ namespace CSharpFoundation
                     "2. Ask Odd or Even\n" +
                     "3. Print Grade\n"+
                     "4. Check NullToInt\n"+
-                    "5. Check NullToString\n"
+                    "5. Check NullToString\n"+
+                    "6. Print Value Greater than 80 using LINQ\n"
                     );
                 inputValue = Console.ReadLine()?.ToString() ?? "Null";
 
@@ -81,6 +82,11 @@ namespace CSharpFoundation
                 else if (value == 5)
                 {
                     LearnAboutNull.NullToString();
+                    Console.WriteLine("X----------------X");
+                }
+                else if (value == 6)
+                {
+                    LearnLINQ.PrintNumGreaterThan80();
                     Console.WriteLine("X----------------X");
                 }
                 else
