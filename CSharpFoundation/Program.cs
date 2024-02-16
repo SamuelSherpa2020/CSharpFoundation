@@ -1,4 +1,5 @@
 ﻿using CSharpFoundation.PracticeProblems;
+using System.Diagnostics;
 using System.Text.RegularExpressions;
 
 namespace CSharpFoundation
@@ -19,7 +20,8 @@ namespace CSharpFoundation
                     "4. Check NullToInt\n" +
                     "5. Check NullToString\n" +
                     "6. Print Value Greater than 80 using LINQ\n" +
-                    "7. Call Value Async and sync method at same time\n"
+                    "7. Call Value Async and sync method at same time\n" +
+                    "8. Learn Sync VS Async through ChatGPT\n"
                     );
                 inputValue = Console.ReadLine()?.ToString() ?? "Null";
 
@@ -140,13 +142,32 @@ namespace CSharpFoundation
                 LearnSync.Method3();
 
 
-               int var =  await LearnAsync.Method2();
-                await LearnAsync.Method1();
-                await LearnAsync.Method3();
-
+                await  LearnAsync.Method1();
+               
+                Task asyncTask2 = LearnAsync.Method2();
+                asyncTask2.Wait();
+                   
+                Task asyncTask3 = LearnAsync.Method3();
+                asyncTask3.Wait();
                 //below for synchronous coding
 
                 Console.WriteLine("X----------------X");
+            }
+            else if (value.Equals(8))
+            {
+                Stopwatch stopwatch = new Stopwatch();
+                stopwatch.Start();
+                LearnAsyncUsingGPT.CallSyncMethod();
+                stopwatch.Stop();
+                Console.WriteLine($"The watch stoped Sync at: {stopwatch.ElapsedMilliseconds} ms");
+
+                stopwatch.Restart();
+                Task asyncTask = LearnAsyncUsingGPT.CallAsyncMethod();
+                asyncTask.Wait();
+                //await LearnAsyncUsingGPT.CallAsyncMethod();
+                stopwatch.Stop();
+                Console.WriteLine($"The watch stoped for Async at: {stopwatch.ElapsedMilliseconds} ms");
+
             }
             else
             {

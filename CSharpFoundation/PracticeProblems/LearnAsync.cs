@@ -34,13 +34,13 @@ namespace CSharpFoundation.PracticeProblems
     {
         public static async Task Method1()
         {
-            Console.WriteLine("Method 1 is called");
+            Console.WriteLine("Aync Method 1 is called");
         }
 
         public static async Task<int> Method2()
         {
             await Task.Delay(2000);
-            Console.WriteLine("Method 2 is called after 2 second");
+            Console.WriteLine("Async Method 2 is called after 2 second");
             
             return 1;
         }
@@ -48,7 +48,7 @@ namespace CSharpFoundation.PracticeProblems
         public static async Task Method3()
         {
            await Task.Delay(3000);
-            Console.WriteLine("Method 3 is called after 3 second");
+            Console.WriteLine("Async Method 3 is called after 3 second");
         }
     }
 }
