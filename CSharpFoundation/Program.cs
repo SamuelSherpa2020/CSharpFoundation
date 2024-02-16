@@ -15,10 +15,11 @@ namespace CSharpFoundation
                 Console.Write("Which program do you want to run, only number like:1,2,3.. is allowed:-\n" +
                     "1. Check Odd or Even\n" +
                     "2. Ask Odd or Even\n" +
-                    "3. Print Grade\n"+
-                    "4. Check NullToInt\n"+
-                    "5. Check NullToString\n"+
-                    "6. Print Value Greater than 80 using LINQ\n"
+                    "3. Print Grade\n" +
+                    "4. Check NullToInt\n" +
+                    "5. Check NullToString\n" +
+                    "6. Print Value Greater than 80 using LINQ\n" +
+                    "7. Call Value Async and sync method at same time\n"
                     );
                 inputValue = Console.ReadLine()?.ToString() ?? "Null";
 
@@ -56,43 +57,8 @@ namespace CSharpFoundation
                 #endregion
 
                 int? value = string.IsNullOrEmpty(inputValue) ? 0 : int.Parse(inputValue);
-                if (value == 1)
-                {
-                    CheckNum.CheckOddOrEven(2);
-                    Console.WriteLine("X-----------------X");
-                    
-                }
-                else if (value == 2)
-                {
-                    CheckNum.AskEvenOrOdd();
-                    Console.WriteLine("X-----------------X");
 
-                }
-                else if (value == 3)
-                {
-                    CheckNum.AskGrade();
-                    Console.WriteLine("X-----------------X");
-
-                }
-                else if(value ==4)
-                {
-                    LearnAboutNull.NullToInt();
-                    Console.WriteLine("X----------------X");
-                }
-                else if (value == 5)
-                {
-                    LearnAboutNull.NullToString();
-                    Console.WriteLine("X----------------X");
-                }
-                else if (value == 6)
-                {
-                    LearnLINQ.PrintNumGreaterThan80();
-                    Console.WriteLine("X----------------X");
-                }
-                else
-                {
-                    Console.WriteLine("The input entered performs nothing.");
-                }
+                RunRequestedProgram(value);
 
             } while (!IsNumeric(inputValue, out number));
         }
@@ -129,6 +95,62 @@ namespace CSharpFoundation
                     return false;
                 }
 
+            }
+        }
+
+        static async void RunRequestedProgram(int? value)
+        {
+            if (value == 1)
+            {
+                CheckNum.CheckOddOrEven(2);
+                Console.WriteLine("X-----------------X");
+
+            }
+            else if (value == 2)
+            {
+                CheckNum.AskEvenOrOdd();
+                Console.WriteLine("X-----------------X");
+
+            }
+            else if (value == 3)
+            {
+                CheckNum.AskGrade();
+                Console.WriteLine("X-----------------X");
+
+            }
+            else if (value == 4)
+            {
+                LearnAboutNull.NullToInt();
+                Console.WriteLine("X----------------X");
+            }
+            else if (value == 5)
+            {
+                LearnAboutNull.NullToString();
+                Console.WriteLine("X----------------X");
+            }
+            else if (value == 6)
+            {
+                LearnLINQ.PrintNumGreaterThan80();
+                Console.WriteLine("X----------------X");
+            }
+            else if (value == 7)
+            {
+                LearnSync.Method1();
+                LearnSync.Method2();
+                LearnSync.Method3();
+
+
+               int var =  await LearnAsync.Method2();
+                await LearnAsync.Method1();
+                await LearnAsync.Method3();
+
+                //below for synchronous coding
+
+                Console.WriteLine("X----------------X");
+            }
+            else
+            {
+                Console.WriteLine("The input entered performs nothing.");
             }
         }
     }
