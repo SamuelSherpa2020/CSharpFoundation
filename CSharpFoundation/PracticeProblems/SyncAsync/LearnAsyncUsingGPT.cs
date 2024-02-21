@@ -12,17 +12,18 @@ namespace CSharpFoundation.PracticeProblems.SyncAsync
         public static void CallSyncMethod()
         {
             Console.WriteLine("The Sync method Opened");
-            for (int i = 0; i < 100000000; i++)
-            {
+            //for (int i = 0; i < 100000000; i++)
+            //{
 
-            }
+            //}
+            Thread.Sleep(1000);
             Console.WriteLine("The Sync method Closed");
         }
         public static async Task CallAsyncMethod()
         {
             Console.WriteLine("The Async program Opened");
             await Task.Delay(1000);
-            await Console.Out.WriteLineAsync("The Async program Opened");
+            await Console.Out.WriteLineAsync("The Async program Closed");
         }
     }
 
