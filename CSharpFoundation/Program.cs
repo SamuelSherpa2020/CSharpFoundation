@@ -1,4 +1,7 @@
 ﻿using CSharpFoundation.PracticeProblems;
+using CSharpFoundation.PracticeProblems.ExtensionMethods;
+using CSharpFoundation.PracticeProblems.Linq;
+using CSharpFoundation.PracticeProblems.SyncAsync;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 
@@ -21,7 +24,8 @@ namespace CSharpFoundation
                     "5. Check NullToString\n" +
                     "6. Print Value Greater than 80 using LINQ\n" +
                     "7. Call Value Async and sync method at same time\n" +
-                    "8. Learn Sync VS Async through ChatGPT\n"
+                    "8. Learn Sync VS Async through ChatGPT\n"+
+                    "9. Learn about extension methods in C#\n"
                     );
                 inputValue = Console.ReadLine()?.ToString() ?? "Null";
 
@@ -168,6 +172,15 @@ namespace CSharpFoundation
                 stopwatch.Stop();
                 Console.WriteLine($"The watch stoped for Async at: {stopwatch.ElapsedMilliseconds} ms");
 
+            }
+            else if (value.Equals(9))
+            {
+               Geek geek = new Geek();
+                geek.M1();
+                geek.M2();
+                geek.M3();
+                geek.M4();
+                geek.M5("apple");
             }
             else
             {

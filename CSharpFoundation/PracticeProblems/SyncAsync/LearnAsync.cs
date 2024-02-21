@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpFoundation.PracticeProblems
+namespace CSharpFoundation.PracticeProblems.SyncAsync
 {
 
 
@@ -14,7 +14,7 @@ namespace CSharpFoundation.PracticeProblems
     {
         public static void Method1()
         {
-            
+
             Console.WriteLine("Sync Method 1 is called");
         }
 
@@ -41,13 +41,13 @@ namespace CSharpFoundation.PracticeProblems
         {
             await Task.Delay(2000);
             Console.WriteLine("Async Method 2 is called after 2 second");
-            
+
             return 1;
         }
 
         public static async Task Method3()
         {
-           await Task.Delay(3000);
+            await Task.Delay(3000);
             Console.WriteLine("Async Method 3 is called after 3 second");
         }
     }
