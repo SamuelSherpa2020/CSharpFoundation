@@ -12,6 +12,7 @@ namespace CSharpFoundation.PracticeProblems.NullableReferenceTypes
         {
             string? Message = null;
 
+
             if(!string.IsNullOrEmpty(Message))
             {
             Console.WriteLine($"The length of the Message is {Message.Length}\n");
