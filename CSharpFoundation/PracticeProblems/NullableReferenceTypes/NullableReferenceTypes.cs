@@ -19,9 +19,9 @@ namespace CSharpFoundation.PracticeProblems.NullableReferenceTypes
             }
             //Console.WriteLine($"The length of the Message is {Message.Length}\n");
 
-            var originalMessage = Message;
 
             Message = "Hello, World";
+            var originalMessage = Message;
             Console.WriteLine($"The length of the Message is {Message}");
 
             Console.WriteLine($"The length of the originalMessage is: {originalMessage.Length}");
