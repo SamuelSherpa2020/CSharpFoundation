@@ -23,7 +23,13 @@ namespace CSharpFoundation.PracticeProblems.ReferenceTypes
             MyFirstReference obj2 = obj1;
             obj2.Myname = "MJ";
 
-            Console.WriteLine($"My name is: {obj2.Myname}");
+            Console.WriteLine($"My name is: {obj1.Myname}");
+
+            //var builder = WebApplication.Builder
+            var path = Directory.GetCurrentDirectory();
+            Console.WriteLine($"The current directory is : {path}");
+
+
         }
 
     }
