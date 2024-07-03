@@ -20,7 +20,7 @@ namespace CSharpFoundation.Exception_Handling
             {
                 if (string.IsNullOrEmpty(chilling))
                 {
-                    throw new ArgumentException(nameof(chilling));
+                    throw new ArgumentNullException(nameof(chilling));
                 }
                 else
                 {
