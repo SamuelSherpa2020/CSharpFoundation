@@ -14,9 +14,9 @@ namespace CSharpFoundation.PracticeProblems.StringLearn
             string person = null;
             string myString = null;
 
-            Console.WriteLine($"Fruit name is {(fruit?? "No fruit")}");
-            Console.WriteLine($"Person name is {(person !=null ? "No person":"Samuel")}");
-            Console.WriteLine($"Person name is {(myString?.Length ??0)}");
+            Console.WriteLine($"Fruit name is {(fruit ?? "No fruit")}");
+            Console.WriteLine($"Person name is {(person != null ? "No person" : "Samuel")}");
+            Console.WriteLine($"Person name is {(myString?.Length ?? 0)}");
             Console.ReadLine();
         }
     }
