@@ -5,7 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CSharpFoundation.PracticeProblems.ReverseGivenWords</StartupObject>
+    <StartupObject>CSharpFoundation.PracticeProblems.PalindromeOrNor</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
