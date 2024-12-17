@@ -5,7 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CSharpFoundation.GuessTheOutput.WhatIsTheOutput1</StartupObject>
+    <StartupObject>CSharpFoundation.MostInterviewAskedQuestions.FindParisOfSum</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
