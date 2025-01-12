@@ -5,7 +5,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CSharpFoundation.MostInterviewAskedQuestions.FindParisOfSum</StartupObject>
+    <StartupObject>CSharpFoundation.MostInterviewAskedQuestions.CheckPalindrome</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
