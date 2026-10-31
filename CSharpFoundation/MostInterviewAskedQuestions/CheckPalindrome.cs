@@ -1,6 +1,6 @@
 ﻿namespace CSharpFoundation.MostInterviewAskedQuestions
 {
-    internal class CheckPalindrome
+    public class CheckPalindrome
     {
         public static void Main()
         {

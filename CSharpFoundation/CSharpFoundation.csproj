@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>CSharpFoundation.Program</StartupObject>
+    <StartupObject>CSharpFoundation.MostInterviewAskedQuestions.CheckPalindrome</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
