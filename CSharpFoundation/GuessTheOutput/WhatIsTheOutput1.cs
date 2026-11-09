@@ -10,12 +10,12 @@ namespace CSharpFoundation.GuessTheOutput
     {
         public static void Main(string[] args)
         {
-            int J = 0;
-            for (int I = 2; I <= 10; I +=2)
+            var j = 0;
+            for (var I = 2; I <= 10; I +=2)
             {
-                J += I;
+                j += I;
             }
-            Console.WriteLine("The total sum is: {0}",J);
+            Console.WriteLine("The total sum is: {0}",j);
             Console.ReadLine();
         }
     }
