@@ -14,7 +14,7 @@ namespace CSharpFoundation.Exception_Handling
             Console.ReadLine();
         }
 
-        public static void GiveName(string chilling)
+        private static void GiveName(string chilling)
         {
             try
             {
