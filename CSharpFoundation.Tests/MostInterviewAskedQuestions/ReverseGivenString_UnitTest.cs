@@ -5,6 +5,7 @@ namespace CSharpFoundation.Tests.MostInterviewAskedQuestions;
 public class ReverseGivenString_UnitTest
 {
 
+    // Below is for testing different scenarios
     [Theory]
     [InlineData("Hello World!", "!dlroW olleH")]
     [InlineData("", "")]
@@ -17,7 +18,7 @@ public class ReverseGivenString_UnitTest
         Assert.Equal(reversedString, result);
     }
     
-    
+    // Below is for testing the Null
     [Fact]
     public void ReverseString_NullInput_ReturnsNull()
     {
