@@ -1,22 +1,22 @@
 ﻿namespace CSharpFoundation.MostInterviewAskedQuestions
 {
-    public class CheckPalindrome
+    public static class CheckPalindrome
     {
         public static void Main()
         {
             Console.WriteLine("Enter the word to check if it's palindrome:");
             var palindromeWord = Console.ReadLine();
             bool result = PalindromeChecker(palindromeWord!);
-            if (result)
-                Console.WriteLine($"The {palindromeWord} is a palindrome");
-            else
-                Console.WriteLine($"The {palindromeWord} is not a palindrome");
+            Console.WriteLine(result
+                ? $"The {palindromeWord} is a palindrome"
+                : $"The {palindromeWord} is not a palindrome");
         }
 
         public static bool PalindromeChecker(string palindromeWord)
         {
-            palindromeWord.ToCharArray();
-            int left = 0, right = palindromeWord.Length - 1;
+            //palindromeWord.ToCharArray();
+            short left = 0;
+            short right = (short)(palindromeWord.Length - 1);
             while (left < right)
             {
                 if (palindromeWord[left] != palindromeWord[right])
