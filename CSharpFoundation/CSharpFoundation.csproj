@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="DataStructures\" />
+    <Folder Include="SoftwareEngineering Documents\" />
   </ItemGroup>
 
 </Project>
